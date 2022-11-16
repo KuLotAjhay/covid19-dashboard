@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Development of COVID-19 Tracker</title>
+</head>
+
+<body>
+    <header>
+        <div class="icon-title-holder">
+            <h1><span>COVID</span>-19</h1>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li class="nav-link"><a href="#symptomp">Symptomps</a></li>
+                <li class="nav-link"><a href="#prevention">Prevention</a></li>
+                <li class="nav-link"><a href="#News">News</a></li>
+                <li class="nav-link"><a href="#Map">Map</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="first-page-holder">
+        <main>
+            <div class="main-section-holder">
+                <div class="right-panel-holder">
+                    <h1>Stay <span> alert </span> - <br> Don't get <span>hurt.</span>
+                    </h1>
+                    <p>Your real time COVID-19 Tracker. The events of COVID-19 is rising. <br> Remember that safety is better than cure.</p>
+                    <div class="buttons-holder">
+                        <div class="colored-about-button">
+                            <a href="https://www.who.int/health-topics/coronavirus" target="_blank">Learn more</a>
+                        </div>
+                        <div class="noncolored-contact-button">
+                            <a href="https://doh.gov.ph/contact" target="_blank">Contact DOH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-panel-holder">
+
+                    <div class="query-search-holder">
+
+                        <div class="search-input">
+                            <input type="text" class="country-placeholder" placeholder="Search a country" required>
+                            <div class="submit-btn"><i class="fas fa-search"></i></div>
+                        </div>
+
+                        <!-- Empty image holder for search query -->
+                        <img class="flag-holder" src="" alt="">
+                    </div>
+
+                    <div class="country-name-holder">
+                        <p class="reminder-section"></p>
+                        <h1 class="country-name"></h1>
+                    </div>
+
+                    <div class="data-holder">
+                        <!-- Section one holder-->
+                        <div class="section-one-holder">
+                            <div class="total-data-holder">
+                                <p class="text-holder">Total cases</p>
+                                <p class="total-cases-data">1,626,830</p>
+                            </div>
+                            <div class="total-data-holder">
+                                <p class="text-holder">Active cases</p>
+                                <p class="active-cases-data">1,626,830</p>
+                            </div>
+                        </div>
+
+                        <!-- Section two holder -->
+                        <div class="section-two-holder">
+                            <div class="total-data-holder">
+                                <p class="text-holder">Death cases</p>
+                                <p class="death-cases-data">1,626,830</p>
+                            </div>
+                            <div class="total-data-holder">
+                                <p class="text-holder">Recovered cases</p>
+                                <p class="recovered-cases-data">1,626,830</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- This is the second page "Symptomp page" -->
+    <div class="symptomp-page" id="symptomp">
+        <div class="title-page">
+            <h1 class="title-page-h1"> What are the symptoms of <span>COVID-19</span>?</h1>
+            <p>If you feel any of this especially the serious symptomps, please do seek medical attention right away. Contact the DOH hotline right now.</p>
+        </div>
+        <div class="symptmomp-page-holder">
+
+            <!-- Card one -->
+            <div class="symptomp-card-one">
+                <h1 class="title-card-one">Serious symptoms</h1>
+                <div class="card-one-img">
+                    <img src="./assets/Serious symptomps/breathing 1.svg" alt="">
+                    <img src="./assets/Serious symptomps/chest-pain-or-pressure 1.svg" alt="">
+                    <img src="./assets/Serious symptomps/loss-of-speech 1.svg" alt="">
+                </div>
+
+                <div class="text-container-one">
+                    <p>Breathing</p>
+                    <p>Chest pain</p>
+                    <p>Loss of speech</p>
+                </div>
+            </div>
+
+            <!-- Card two -->
+            <div class="symptomp-card-two">
+                <h1 class="title-card-two">Less common symptoms</h1>
+
+                <div class="card-two-img">
+                    <div class="card-two-section-one">
+                        <img src="./assets/Less common symptomps/diarrhoea 1.svg" alt="">
+                        <img src="./assets/Less common symptomps/headache 1.svg" alt="">
+                        <img src="./assets/Less common symptomps/loss-of-sense-of-smell 1.svg" alt="">
+                    </div>
+                    <div class="card-two-text-one">
+                        <p>Diarrhoea</p>
+                        <p>Headache</p>
+                        <p>Loss of sense</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="symptomp-card-three">
+                <h1 class="title-card-three">Most common symptoms</h1>
+                <div class="card-three-img">
+                    <img src="./assets/Most common symptomps/fever 1.svg" alt="">
+                    <img src="./assets/Most common symptomps/sneeze 1.svg" alt="">
+                    <img src="./assets/Serious symptomps/loss-of-speech 1.svg" alt="">
+                </div>
+
+                <div class="text-container-three">
+                    <p>Fever</p>
+                    <p>Sneeze</p>
+                    <p>Loss of speech</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Treatment page-->
+    <div class="treatment-page" id="prevention">
+        <div class="left-panel">
+            <h1>How to prevent the spread of <span>COVID-19</span>?</h1>
+            <ul>
+                <li>Clean your hands often. Use soap and water, or an alcohol-based hand rub.</li>
+                <li>Wear a mask when physical distancing is not possible.</li>
+                <li>Maintain a safe distance from anyone who is coughing or sneezing.</li>
+                <li>Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</li>
+            </ul>
+        </div>
+        <div class="right-panel">
+            <img src="./assets/Treatment page svg/undraw_medical_research_qg4d.svg" alt="">
+        </div>
+    </div>
+
+    <div class="treatment-page-two">
+        <div class="left-panel-two">
+            <img src="./assets/Treatment page svg/undraw_social_distancing_2g0u (1).svg" alt="">
+        </div>
+        <div class="right-panel-two">
+            <h1>Maintain social <span>distancing</span></h1>
+            <ul>
+                <li>Stay home if you feel unwell.</li>
+                <li>If you have a fever, cough and difficulty breathing, seek medical attention.</li>
+                <li>Don’t touch your eyes, nose or mouth.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- News page -->
+    <div class="news-page" id="News">
+        <div class="news-title">
+            <h1>Get updated anywhere and <span>anytime</span>.</h1>
+        </div>
+        <div class="news-holder">
+            <div class="news-one">
+                <img class="news-img" src="./assets/news/news-one.jpg" alt="">
+
+                <div class="news-one-text">
+                    <h1>Matt Hancock kiss: Covid families warn it could undermine efforts against virus</h1>
+                    <p>Matt Hancock's breach of social distancing guidance when he kissed an aide could damage government messaging on fighting the virus, families of Covid victims have warned.</p>
+                    <button class="news-button"><a href="https://www.bbc.com/news/uk-57619721" target= "_blank">Read more</a></button>
+                </div>
+            </div>
+
+            <div class="news-two">
+                <img class="news-img" src="./assets/news/news-two.jpg" alt="">
+
+                <div class="news-two-text">
+                    <h1>NSW Covid outbreaks: Gladys Berejiklian locks down Sydney, Central Coast, Blue Mountains and Wollongong</h1>
+                    <p>All of greater Sydney, the Central Coast, the Blue Mountains and Wollongong regions will enter a two-week coronavirus lockdown until 9 July and new restrictions will be in place for the remainder of New South Wales.</p>
+                    <button class="news-button"><a href="https://www.theguardian.com/australia-news/2021/jun/26/gladys-berejiklian-to-hold-covid-crisis-talks-as-sydney-outbreak-expands-beyond-lockdown-areas" target= "_blank">Read more</a></button>
+                </div>
+            </div>
+
+            <div class="news-three">
+                <img class="news-img" src="./assets/news/news-three.jpg" alt="">
+
+                <div class="news-three-text">
+                    <h1>6,871 new COVID-19 infections push Philippines caseload to 1.39M</h1>
+                    <p>MANILA, Philippines — Local health authorities on Saturday reported 6,871 more COVID-19 infections, bringing the national caseload to 1,391,911.</p>
+                    <button class="news-button"><a href="https://www.philstar.com/headlines/2021/06/26/2108280/6871-new-covid-19-infections-push-philippines-caseload-139m" target= "_blank">Read more</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map page -->
+    <div class="map-page" id="Map">
+        <div class="map-holder">
+            <div class="map-text">
+                <h1>Know your nearest hospitals <br>around <span>you</span>.</h1>
+                <p>If you are feeling all the symptomps mentioned above, </p>
+                <p>please do seek a doctor or go to the nearest hospital.</p>
+            </div>
+            <iframe class="custom map" src="https://www.google.com/maps/d/u/0/embed?mid=1xhf_Z9799JgGpc_szj6cj7ty4NBHEDfi" width="auto" height="480"></iframe>
+        </div>
+    </div>
+
+    <!-- Contacts and hotlines of DOH page-->
+    <div class="contacts-page">
+        <div class="contact-p-text">
+            <p>If you have any concern or questions, you can ask questions if you suspect they are infected with COVID-19 or request assistance if they have symptoms and/or known exposure to confirmed cases or patients under investigation. The information
+                collected from emergency calls is transmitted to the COVID-19 Emergency Operations Center and other relevant agencies for immediate facilitation and response.</p>
+        </div>
+        <div class="contact-numbers">
+            <div class="DOH-number">
+                <ul>
+                    <li class="contact-li">Department of Health (DOH)</li>
+                    <ul class="nested-ul">
+                        <li>02-894-COVID (02-894-26843)</li>
+                        <li>1555 (PLDT, Smart, Sun, and TNT Subscribers)</li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="DOH-number">
+                <ul>
+                    <li class="contact-li">Research Institute for Tropical Medicine (RITM)</li>
+                    <ul class="nested-ul">
+                        <li>(02) 8-807-2631</li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="DOH-number">
+                <ul>
+                    <li class="contact-li">Philippine Red Cross</li>
+                    <ul class="nested-ul">
+                        <li>Hotline 1158</li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="reminder-credit">
+            <p>All of the pictures / details here are used for educational purposes only.</p>
+        </div>
+    </footer>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

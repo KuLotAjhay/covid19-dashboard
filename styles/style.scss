@@ -1,0 +1,1025 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    header {
+        // This is the header section
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        background-color: #211515;
+        width: 100%;
+        .icon-title-holder span {
+            color: #FF5757;
+        }
+        .icon-title-holder h1 {
+            color: white;
+        }
+        .nav-links li {
+            color: white;
+            list-style-type: none;
+            margin: 1em;
+            font-size: 18px;
+            cursor: pointer;
+            padding: .5em;
+            position: relative;
+            transition: all ease-in-out 250ms;
+        }
+        .nav-links li::after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 0.4em;
+            width: 0%;
+            background-color: #FF5757;
+            bottom: -1em;
+            transition: all ease-in-out 250ms;
+        }
+        .nav-links li:hover::after {
+            width: 70%;
+        }
+        .nav-link:hover {
+            color: #FF5757;
+        }
+        .nav-links ul {
+            display: flex;
+        }
+    }
+    scroll-behavior: smooth;
+    font-family: 'Poppins',
+    sans-serif;
+    // This is the first page holder 
+    .first-page-holder {
+        height: 80vh;
+        // The main section holder
+        .main-section-holder {
+            align-items: center;
+            height: 50vh;
+            display: flex;
+            margin: 2em;
+            justify-content: space-around;
+            margin-top: 5em;
+            // Right panel holders
+            .right-panel-holder h1 {
+                font-size: 60px;
+                line-height: 1.2em;
+                margin-bottom: .5em;
+            }
+            .right-panel-holder p {
+                font-size: 18px;
+            }
+            .right-panel-holder span {
+                color: #FF5757;
+                font-size: 75px;
+            }
+            .buttons-holder {
+                margin-top: 2em;
+                display: flex;
+                .colored-about-button {
+                    background-color: #FF5757;
+                    padding: 1em;
+                    color: white;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    margin-right: 1em;
+                    transition: 0.3s;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+                .colored-about-button:hover {
+                    background-color: #d34848;
+                }
+                .noncolored-contact-button {
+                    padding: 1em;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    transition: 0.3s;
+                    border: #d34848 2px solid;
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+                .noncolored-contact-button:hover {
+                    border-color: #d34848;
+                }
+            }
+            // Left panel holders 
+            .left-panel-holder {
+                .query-search-holder {
+                    display: flex;
+                    margin-bottom: 1em;
+                    align-items: center;
+                    .search-input {
+                        position: relative;
+                        input {
+                            padding: 1em;
+                            border: none;
+                            font-size: 18px;
+                            box-shadow: 12px 12px 24px 2px rgba(0, 0, 0, 0.1);
+                            border-radius: 10px;
+                            margin: .5em;
+                        }
+                        .submit-btn {
+                            position: absolute;
+                            top: 0;
+                            right: .5em;
+                            padding: .5em;
+                            height: 55px;
+                            width: 55px;
+                            text-align: center;
+                            line-height: 55px;
+                            font-size: 20px;
+                            cursor: pointer;
+                            transition: 0.3s;
+                            color: rgb(31, 31, 31);
+                        }
+                        .submit-btn:hover {
+                            color: rgb(41, 41, 41);
+                        }
+                    }
+                    .flag-holder {
+                        height: 70px;
+                        margin: 1em;
+                    }
+                }
+                .reminder-section {
+                    display: none;
+                }
+                .country-name-holder h1 {
+                    font-size: 22px;
+                    text-align: center;
+                }
+                .country-name-holder p {
+                    padding: .8em;
+                    font-size: 18px;
+                }
+                .data-holder {
+                    display: flex;
+                    .total-data-holder {
+                        background-color: #211515;
+                        margin: .8em;
+                        padding: 2em;
+                        border-radius: 10px;
+                        .text-holder {
+                            font-weight: bold;
+                            color: white;
+                            font-size: 18px;
+                        }
+                        .total-cases-data {
+                            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
+                            font-size: 20px;
+                            font-weight: bold;
+                            color: #12D2BB;
+                        }
+                        .death-cases-data {
+                            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
+                            font-size: 20px;
+                            font-weight: bold;
+                            color: #D22D2D;
+                        }
+                        .active-cases-data {
+                            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
+                            font-size: 20px;
+                            font-weight: bold;
+                            color: #D2A812;
+                        }
+                        .recovered-cases-data {
+                            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
+                            font-size: 20px;
+                            font-weight: bold;
+                            color: #39D212;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // This is for the second page symptomp page
+    .symptomp-page {
+        background: linear-gradient(90deg, rgba(255, 147, 87, 0.77) 0%, rgba(255, 114, 87, 0.897259) 31.34%, #FF5757 100%);
+        .title-page {
+            text-align: center;
+            padding: 1em;
+            margin-top: 2em;
+            h1 {
+                font-size: 3em;
+                font-weight: bold;
+            }
+            span {
+                color: white;
+            }
+            p {
+                font-size: 18px;
+                padding: 1em;
+            }
+        }
+        .symptmomp-page-holder {
+            justify-content: center;
+            padding: 2em;
+            margin-top: 2em;
+            display: flex;
+            justify-content: space-around;
+        }
+        // Card one
+        .symptomp-card-one {
+            max-width: 100%;
+            background-color: white;
+            width: 500px;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            .title-card-one {
+                padding: 1em;
+                font-size: 22px;
+                color: #830000;
+                text-align: center;
+            }
+            .card-one-img {
+                margin: .5em;
+                display: flex;
+                justify-content: space-around;
+            }
+            .text-container-one {
+                font-weight: bold;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        .symptomp-card-one:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        // Card two
+        .symptomp-card-two {
+            max-width: 100%;
+            background-color: white;
+            padding: 2em;
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            .title-card-two {
+                padding: 1em;
+                font-size: 22px;
+                color: #086700;
+                text-align: center;
+            }
+            .card-two-section-one {
+                margin: .5em;
+                display: flex;
+                justify-content: space-around;
+            }
+            .card-two-text-one {
+                font-weight: bold;
+                display: flex;
+                justify-content: space-around;
+            }
+            .card-two-section-two {
+                margin: .5em;
+                display: flex;
+                justify-content: space-around;
+            }
+            .card-two-text-two {
+                font-weight: bold;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        .symptomp-card-two:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        // Card three
+        .symptomp-card-three {
+            max-width: 100%;
+            background-color: white;
+            padding: 1em;
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            .title-card-three {
+                padding: 1em;
+                font-size: 22px;
+                color: #CB6100;
+                text-align: center;
+            }
+            .card-three-img {
+                margin: .5em;
+                display: flex;
+                justify-content: space-around;
+            }
+            .text-container-three {
+                font-weight: bold;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        .symptomp-card-three:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+    // Treatment page
+    .treatment-page {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 60vh;
+        .left-panel {
+            border-right: #FF5757 2px solid;
+            padding: 4em;
+            h1 {
+                font-size: 32px;
+                text-align: center;
+            }
+            span {
+                color: #FF5757;
+                font-size: 42px;
+            }
+            ul {
+                padding: 1em;
+            }
+            li {
+                font-size: 18px;
+            }
+        }
+        .right-panel {
+            padding: 5em;
+            img {
+                height: 500px;
+            }
+        }
+    }
+    .treatment-page-two {
+        margin-top: 5em;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .left-panel-two {
+            padding: 5em;
+            img {
+                height: 500px;
+            }
+        }
+        .right-panel-two {
+            padding: 4em;
+            border-left: #FF5757 2px solid;
+            h1 {
+                font-size: 32px;
+                text-align: center;
+            }
+            span {
+                color: #FF5757;
+                font-size: 42px;
+            }
+            ul {
+                padding: 1em;
+            }
+            li {
+                font-size: 18px;
+            }
+        }
+    }
+    // News page
+    .news-page {
+        height: 100vh;
+        .news-holder {
+            display: flex;
+            align-items: center;
+            margin: 2em;
+        }
+        .news-title {
+            margin-top: 2em;
+            border-bottom: #FF5757 2px solid;
+            padding: 2em;
+            text-align: center;
+            h1 {
+                font-size: 32px;
+            }
+            span {
+                font-size: 42px;
+                color: #FF5757;
+            }
+        }
+        .news-one {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
+            width: 1000px;
+            margin: 2em;
+            transition: all 0.3s ease;
+            .news-img {
+                height: 200px;
+                width: 100%;
+            }
+            .news-one-text {
+                padding: 2em;
+                h1 {
+                    font-size: 22px;
+                    padding: .5em;
+                }
+                p {
+                    font-size: 18px;
+                    padding: .5em;
+                }
+                .news-button {
+                    border: none;
+                    background-color: #FF5757;
+                    padding: 1em;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-size: 18px;
+                    }
+                }
+                .news-button:hover {
+                    background-color: #d34848;
+                }
+            }
+        }
+        .news-one:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        .news-two {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
+            width: 900px;
+            margin: 2em;
+            transition: all 0.3s ease;
+            .news-img {
+                height: 300px;
+                width: 100%;
+            }
+            .news-two-text {
+                padding: 2em;
+                h1 {
+                    font-size: 22px;
+                    padding: .5em;
+                }
+                p {
+                    font-size: 18px;
+                    padding: .5em;
+                }
+                .news-button {
+                    border: none;
+                    background-color: #FF5757;
+                    padding: 1em;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-size: 18px;
+                    }
+                }
+                .news-button:hover {
+                    background-color: #d34848;
+                }
+            }
+        }
+        .news-two:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        .news-three {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
+            width: 900px;
+            margin: 2em;
+            transition: all 0.3s ease;
+            .news-img {
+                height: 300px;
+                width: 100%;
+            }
+            .news-three-text {
+                padding: 2em;
+                h1 {
+                    font-size: 22px;
+                    padding: .5em;
+                }
+                p {
+                    font-size: 18px;
+                    padding: .5em;
+                }
+                .news-button {
+                    border: none;
+                    background-color: #FF5757;
+                    padding: 1em;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-size: 18px;
+                    }
+                }
+                .news-button:hover {
+                    background-color: #d34848;
+                }
+            }
+        }
+        .news-three:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+    // Map page 
+    .map-page {
+        background: linear-gradient(90deg, rgba(255, 147, 87, 0.77) 0%, rgba(255, 114, 87, 0.897259) 31.34%, #FF5757 100%);
+        margin-top: 100px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 2em;
+        .map-holder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .map-text {
+            margin: 2em;
+            h1 {
+                line-height: 1em;
+                font-size: 40px;
+                padding: .5em;
+            }
+            span {
+                font-size: 65px;
+                color: white;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+    // Contact page
+    .contacts-page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3em;
+        .contact-p-text {
+            font-size: 18px;
+            width: 600px;
+            margin: 1em;
+            padding: 4em;
+            border-right: #FF5757 2px solid;
+        }
+        .contact-numbers {
+            padding: 2em;
+            .DOH-number {
+                .contact-li,
+                .city-name {
+                    font-weight: bold;
+                }
+                .nested-ul {
+                    list-style-type: none;
+                }
+            }
+        }
+    }
+    .reminder-credit {
+        bottom: 0;
+        background-color: #FF5757;
+        text-align: center;
+        color: white;
+        width: 100%;
+        font-size: 18px;
+    }
+    // For responsiveness design 
+    @media screen and (max-width: 768px) {
+        //This is the first page of the header--
+        header {
+            font-size: 12px;
+            text-align: right;
+            margin-bottom: 5em;
+        }
+        .nav-links {
+            display: none;
+            text-align: right;
+        }
+        .main-section-holder {
+            flex-direction: column;
+            .right-panel-holder {
+                margin-top: 30em;
+                margin-bottom: 3em;
+            }
+        }
+        .symptomp-page {
+            margin-top: 20em;
+        }
+        .symptmomp-page-holder {
+            flex-direction: column;
+        }
+        .treatment-page {
+            flex-direction: column;
+            margin-top: 50em;
+            padding: 1em;
+        }
+        .left-panel {
+            padding: 1em;
+            border-right: none;
+        }
+        .right-panel img {
+            max-height: 300px;
+        }
+        .treatment-page-two {
+            flex-direction: column-reverse;
+            margin-top: 25em;
+        }
+        .right-panel-two {
+            padding: 1em;
+            border: none;
+        }
+        .left-panel-two img {
+            max-height: 300px;
+        }
+        .news-page {
+            margin-top: 15em;
+            padding: 1em;
+        }
+        .news-holder {
+            margin: 2em;
+            flex-direction: column;
+        }
+        .news-one {
+            max-width: 500px;
+        }
+        .news-two {
+            max-width: 500px;
+        }
+        .news-three {
+            max-width: 500px;
+        }
+        .map-page {
+            margin-top: 90em;
+        }
+        .map-holder {
+            flex-direction: column;
+        }
+        .custom-map {
+            padding: 2em;
+        }
+        .contacts-page {
+            margin-top: 20em;
+            flex-direction: column;
+        }
+        .contact-p-text {
+            margin: 2em;
+        }
+    }
+    @media screen and (max-width: 360px) {
+        header {
+            padding: .5em;
+        }
+        .main-section-holder {
+            margin: 2em;
+        }
+        .query-search-holder {
+            flex-direction: column;
+            margin-bottom: .5em;
+        }
+        .country-name-holder {
+            font-size: 12px;
+            padding: .5em;
+        }
+        .nav-links {
+            display: none;
+            text-align: right;
+        }
+        .main-section-holder {
+            flex-direction: column;
+            padding: .5em;
+        }
+        .buttons-holder {
+            margin-top: 1em;
+        }
+        .symptomp-page {
+            max-width: 100%;
+            margin-top: 45em;
+        }
+        .symptmomp-page-holder {
+            flex-direction: column;
+        }
+        .symptomp-card-one {
+            align-items: center;
+            max-width: 100%;
+            .title-card-one {
+                font-size: 18px;
+                text-align: center;
+            }
+            .card-one-img {
+                img {
+                    margin: .5em;
+                }
+            }
+            .text-container-one {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+        .symptomp-card-two {
+            align-items: center;
+            max-width: 100%;
+            .title-card-two {
+                font-size: 18px;
+            }
+            .card-two-img {
+                padding: 1em;
+                img {
+                    margin: .5em;
+                }
+            }
+            .card-two-text-one {
+                max-width: 100%;
+                text-align: center;
+                p {
+                    margin: .5em;
+                }
+            }
+        }
+        .symptomp-card-three {
+            align-items: center;
+            max-width: 100%;
+            .title-card-three {
+                font-size: 18px;
+            }
+            .card-three-img {
+                padding: 1em;
+                img {
+                    margin: .5em;
+                }
+            }
+            .card-three-text-one {
+                max-width: 100%;
+                text-align: center;
+                p {
+                    margin: .5em;
+                }
+            }
+        }
+        .treatment-page {
+            flex-direction: column;
+            margin-top: 50em;
+            height: none;
+            padding: 1em;
+        }
+        .left-panel {
+            padding: 1em;
+            border: #FF5757 2px solid;
+        }
+        .right-panel img {
+            max-height: 200px;
+        }
+        .treatment-page-two {
+            flex-direction: column-reverse;
+            margin-top: 45em;
+        }
+        .right-panel-two {
+            padding: 1em;
+            border: #FF5757 2px solid;
+        }
+        .left-panel-two img {
+            max-height: 200px;
+        }
+        .news-page {
+            margin-top: 10em;
+            padding: 1em;
+        }
+        .news-holder {
+            margin: 1em;
+            max-width: 100%;
+            flex-direction: column;
+        }
+        .news-one {
+            max-width: 300px;
+        }
+        .news-one-text {
+            font-size: 12px;
+        }
+        .news-two {
+            max-width: 300px;
+        }
+        .news-two-text {
+            font-size: 12px;
+        }
+        .news-three {
+            max-width: 300px;
+        }
+        .news-three-text {
+            font-size: 12px;
+        }
+        .map-page {
+            margin-top: 140em;
+            padding: 1em;
+        }
+        .map-holder {
+            flex-direction: column;
+        }
+        .contacts-page {
+            margin-top: 10em;
+            flex-direction: column;
+            .contact-p-text {
+                max-width: 100%;
+                padding: 2em;
+                margin: .5em;
+                border: none;
+                p {
+                    font-size: 16px;
+                }
+            }
+            .contact-numbers {
+                margin: 3em;
+            }
+        }
+        .reminder-credit {
+            font-size: 12px;
+        }
+    }
+    @media screen and (max-width: 414px) {
+        header {
+            text-align: right;
+            margin-bottom: 20em;
+            padding: .5em;
+        }
+        .main-section-holder {
+            margin: 2em;
+        }
+        .query-search-holder {
+            flex-direction: column;
+            margin-bottom: .5em;
+        }
+        .country-name-holder {
+            font-size: 12px;
+            padding: .5em;
+        }
+        .nav-links {
+            display: none;
+            text-align: right;
+        }
+        .main-section-holder {
+            flex-direction: column;
+            padding: .5em;
+        }
+        .buttons-holder {
+            margin-top: 1em;
+        }
+        .symptomp-page {
+            max-width: 100%;
+            margin-top: 45em;
+        }
+        .symptmomp-page-holder {
+            flex-direction: column;
+        }
+        .symptomp-card-one {
+            align-items: center;
+            max-width: 100%;
+            .title-card-one {
+                font-size: 18px;
+                text-align: center;
+            }
+            .card-one-img {
+                img {
+                    margin: .5em;
+                }
+            }
+            .text-container-one {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+        .symptomp-card-two {
+            align-items: center;
+            max-width: 100%;
+            .title-card-two {
+                font-size: 18px;
+            }
+            .card-two-img {
+                padding: 1em;
+                img {
+                    margin: .5em;
+                }
+            }
+            .card-two-text-one {
+                max-width: 100%;
+                text-align: center;
+                p {
+                    margin: .5em;
+                }
+            }
+        }
+        .symptomp-card-three {
+            align-items: center;
+            max-width: 100%;
+            .title-card-three {
+                font-size: 18px;
+            }
+            .card-three-img {
+                padding: 1em;
+                img {
+                    margin: .5em;
+                }
+            }
+            .card-three-text-one {
+                max-width: 100%;
+                text-align: center;
+                p {
+                    margin: .5em;
+                }
+            }
+        }
+        .treatment-page {
+            flex-direction: column;
+            margin-top: 50em;
+            height: none;
+            padding: 1em;
+        }
+        .left-panel {
+            padding: 1em;
+            border: #FF5757 2px solid;
+        }
+        .right-panel img {
+            max-height: 200px;
+        }
+        .treatment-page-two {
+            flex-direction: column-reverse;
+            margin-top: 45em;
+        }
+        .right-panel-two {
+            padding: 1em;
+            border: #FF5757 2px solid;
+        }
+        .left-panel-two img {
+            max-height: 200px;
+        }
+        .news-page {
+            margin-top: 10em;
+            padding: 1em;
+        }
+        .news-holder {
+            margin: 1em;
+            max-width: 100%;
+            flex-direction: column;
+        }
+        .news-one {
+            max-width: 300px;
+        }
+        .news-one-text {
+            font-size: 12px;
+        }
+        .news-two {
+            max-width: 300px;
+        }
+        .news-two-text {
+            font-size: 12px;
+        }
+        .news-three {
+            max-width: 300px;
+        }
+        .news-three-text {
+            font-size: 12px;
+        }
+        .map-page {
+            margin-top: 140em;
+            padding: 1em;
+        }
+        .map-holder {
+            flex-direction: column;
+        }
+        .contacts-page {
+            margin-top: 10em;
+            flex-direction: column;
+            .contact-p-text {
+                max-width: 100%;
+                padding: 2em;
+                margin: .5em;
+                border: none;
+                p {
+                    font-size: 16px;
+                }
+            }
+            .contact-numbers {
+                margin: 3em;
+            }
+        }
+        .reminder-credit {
+            font-size: 12px;
+        }
+    }
+}
